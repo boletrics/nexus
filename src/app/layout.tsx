@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "Venue Map Editor | Ticketing Platform",
-	description: "Professional venue map editor for creating and managing seating layouts",
+	description:
+		"Professional venue map editor for creating and managing seating layouts",
 };
 
 export default function RootLayout({

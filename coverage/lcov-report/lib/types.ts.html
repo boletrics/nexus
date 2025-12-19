@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -260,14 +260,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -291,117 +291,117 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Venue Map Editor Types
 &nbsp;
-export type EditorMode = "edit" | "tier-assignment"
+export type EditorMode = "edit" | "tier-assignment";
 &nbsp;
-export type ElementType = "seat-row" | "standing" | "box" | "table"
+export type ElementType = "seat-row" | "standing" | "box" | "table";
 &nbsp;
-export type TierType = "vip" | "premium" | "standard" | "economy" | null
+export type TierType = "vip" | "premium" | "standard" | "economy" | null;
 &nbsp;
 export interface Position {
-  x: number
-  y: number
+	x: number;
+	y: number;
 }
 &nbsp;
 export interface Dimensions {
-  width: number
-  height: number
+	width: number;
+	height: number;
 }
 &nbsp;
 export interface SeatRow {
-  id: string
-  type: "seat-row"
-  position: Position
-  seats: number
-  rowLabel: string
-  curved: boolean
-  curveAngle: number
-  spacing: number
-  tier: TierType
+	id: string;
+	type: "seat-row";
+	position: Position;
+	seats: number;
+	rowLabel: string;
+	curved: boolean;
+	curveAngle: number;
+	spacing: number;
+	tier: TierType;
 }
 &nbsp;
 export interface StandingArea {
-  id: string
-  type: "standing"
-  position: Position
-  dimensions: Dimensions
-  capacity: number
-  label: string
-  tier: TierType
+	id: string;
+	type: "standing";
+	position: Position;
+	dimensions: Dimensions;
+	capacity: number;
+	label: string;
+	tier: TierType;
 }
 &nbsp;
 export interface Box {
-  id: string
-  type: "box"
-  position: Position
-  dimensions: Dimensions
-  capacity: number
-  label: string
-  amenities: string[]
-  tier: TierType
+	id: string;
+	type: "box";
+	position: Position;
+	dimensions: Dimensions;
+	capacity: number;
+	label: string;
+	amenities: string[];
+	tier: TierType;
 }
 &nbsp;
 export interface Table {
-  id: string
-  type: "table"
-  position: Position
-  seats: number
-  shape: "round" | "rectangular"
-  label: string
-  tier: TierType
+	id: string;
+	type: "table";
+	position: Position;
+	seats: number;
+	shape: "round" | "rectangular";
+	label: string;
+	tier: TierType;
 }
 &nbsp;
-export type VenueElement = SeatRow | StandingArea | Box | Table
+export type VenueElement = SeatRow | StandingArea | Box | Table;
 &nbsp;
 export interface Stage {
-  position: Position
-  dimensions: Dimensions
-  label: string
+	position: Position;
+	dimensions: Dimensions;
+	label: string;
 }
 &nbsp;
 export interface VenueMap {
-  id: string
-  name: string
-  dimensions: Dimensions
-  elements: VenueElement[]
-  stage: Stage | null
+	id: string;
+	name: string;
+	dimensions: Dimensions;
+	elements: VenueElement[];
+	stage: Stage | null;
 }
 &nbsp;
 export interface Tier {
-  id: TierType
-  name: string
-  color: string
-  price: number
+	id: TierType;
+	name: string;
+	color: string;
+	price: number;
 }
 &nbsp;
-export const TIERS: Tier[] = <span class="cstat-no" title="statement not covered" >[</span>
-  { id: "vip", name: "VIP", color: "bg-tier-vip", price: 250 },
-  { id: "premium", name: "Premium", color: "bg-tier-premium", price: 150 },
-  { id: "standard", name: "Standard", color: "bg-tier-standard", price: 85 },
-  { id: "economy", name: "Economy", color: "bg-tier-economy", price: 45 },
-]
+export const TIERS: Tier[] = [
+	{ id: "vip", name: "VIP", color: "bg-tier-vip", price: 250 },
+	{ id: "premium", name: "Premium", color: "bg-tier-premium", price: 150 },
+	{ id: "standard", name: "Standard", color: "bg-tier-standard", price: 85 },
+	{ id: "economy", name: "Economy", color: "bg-tier-economy", price: 45 },
+];
 &nbsp;
-export const TAILWIND_COLORS = <span class="cstat-no" title="statement not covered" >[</span>
-  { name: "Slate", value: "slate" },
-  { name: "Gray", value: "gray" },
-  { name: "Zinc", value: "zinc" },
-  { name: "Red", value: "red" },
-  { name: "Orange", value: "orange" },
-  { name: "Amber", value: "amber" },
-  { name: "Yellow", value: "yellow" },
-  { name: "Lime", value: "lime" },
-  { name: "Green", value: "green" },
-  { name: "Emerald", value: "emerald" },
-  { name: "Teal", value: "teal" },
-  { name: "Cyan", value: "cyan" },
-  { name: "Sky", value: "sky" },
-  { name: "Blue", value: "blue" },
-  { name: "Indigo", value: "indigo" },
-  { name: "Violet", value: "violet" },
-  { name: "Purple", value: "purple" },
-  { name: "Fuchsia", value: "fuchsia" },
-  { name: "Pink", value: "pink" },
-  { name: "Rose", value: "rose" },
-]
+export const TAILWIND_COLORS = [
+	{ name: "Slate", value: "slate" },
+	{ name: "Gray", value: "gray" },
+	{ name: "Zinc", value: "zinc" },
+	{ name: "Red", value: "red" },
+	{ name: "Orange", value: "orange" },
+	{ name: "Amber", value: "amber" },
+	{ name: "Yellow", value: "yellow" },
+	{ name: "Lime", value: "lime" },
+	{ name: "Green", value: "green" },
+	{ name: "Emerald", value: "emerald" },
+	{ name: "Teal", value: "teal" },
+	{ name: "Cyan", value: "cyan" },
+	{ name: "Sky", value: "sky" },
+	{ name: "Blue", value: "blue" },
+	{ name: "Indigo", value: "indigo" },
+	{ name: "Violet", value: "violet" },
+	{ name: "Purple", value: "purple" },
+	{ name: "Fuchsia", value: "fuchsia" },
+	{ name: "Pink", value: "pink" },
+	{ name: "Rose", value: "rose" },
+];
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -409,7 +409,7 @@ export const TAILWIND_COLORS = <span class="cstat-no" title="statement not cover
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-19T02:17:56.316Z
+                at 2025-12-19T02:20:48.159Z
             </div>
         <script src="../prettify.js"></script>
         <script>

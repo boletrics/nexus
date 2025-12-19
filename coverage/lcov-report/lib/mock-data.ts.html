@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -221,10 +221,11 @@
 <a name='L156'></a><a href='#L156'>156</a>
 <a name='L157'></a><a href='#L157'>157</a>
 <a name='L158'></a><a href='#L158'>158</a>
-<a name='L159'></a><a href='#L159'>159</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -378,165 +379,167 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { VenueMap } from "./types"
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { VenueMap } from "./types";
 &nbsp;
 // Generate mock venue data
-export const createMockVenue = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(): VenueMap =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span></span>
-  id: "venue-1",
-  name: "Grand Arena",
-  dimensions: { width: 1200, height: 800 },
-  stage: {
-    position: { x: 400, y: 50 },
-    dimensions: { width: 400, height: 80 },
-    label: "Main Stage",
-  },
-  elements: [
-    // Front rows (VIP)
-    {
-      id: "row-a",
-      type: "seat-row",
-      position: { x: 200, y: 180 },
-      seats: 20,
-      rowLabel: "A",
-      curved: true,
-      curveAngle: 10,
-      spacing: 32,
-      tier: "vip",
-    },
-    {
-      id: "row-b",
-      type: "seat-row",
-      position: { x: 180, y: 220 },
-      seats: 22,
-      rowLabel: "B",
-      curved: true,
-      curveAngle: 8,
-      spacing: 32,
-      tier: "vip",
-    },
-    // Middle rows (Premium)
-    {
-      id: "row-c",
-      type: "seat-row",
-      position: { x: 160, y: 280 },
-      seats: 24,
-      rowLabel: "C",
-      curved: false,
-      curveAngle: 0,
-      spacing: 32,
-      tier: "premium",
-    },
-    {
-      id: "row-d",
-      type: "seat-row",
-      position: { x: 160, y: 320 },
-      seats: 24,
-      rowLabel: "D",
-      curved: false,
-      curveAngle: 0,
-      spacing: 32,
-      tier: "premium",
-    },
-    {
-      id: "row-e",
-      type: "seat-row",
-      position: { x: 160, y: 360 },
-      seats: 24,
-      rowLabel: "E",
-      curved: false,
-      curveAngle: 0,
-      spacing: 32,
-      tier: "premium",
-    },
-    // Back rows (Standard)
-    {
-      id: "row-f",
-      type: "seat-row",
-      position: { x: 140, y: 420 },
-      seats: 26,
-      rowLabel: "F",
-      curved: false,
-      curveAngle: 0,
-      spacing: 32,
-      tier: "standard",
-    },
-    {
-      id: "row-g",
-      type: "seat-row",
-      position: { x: 140, y: 460 },
-      seats: 26,
-      rowLabel: "G",
-      curved: false,
-      curveAngle: 0,
-      spacing: 32,
-      tier: "standard",
-    },
-    {
-      id: "row-h",
-      type: "seat-row",
-      position: { x: 140, y: 500 },
-      seats: 26,
-      rowLabel: "H",
-      curved: false,
-      curveAngle: 0,
-      spacing: 32,
-      tier: "standard",
-    },
-    // VIP Boxes
-    {
-      id: "box-1",
-      type: "box",
-      position: { x: 50, y: 180 },
-      dimensions: { width: 100, height: 120 },
-      capacity: 8,
-      label: "Box 1",
-      amenities: ["Private Bar", "Catering", "VIP Entrance"],
-      tier: "vip",
-    },
-    {
-      id: "box-2",
-      type: "box",
-      position: { x: 1050, y: 180 },
-      dimensions: { width: 100, height: 120 },
-      capacity: 8,
-      label: "Box 2",
-      amenities: ["Private Bar", "Catering", "VIP Entrance"],
-      tier: "vip",
-    },
-    // Standing Areas
-    {
-      id: "standing-1",
-      type: "standing",
-      position: { x: 300, y: 580 },
-      dimensions: { width: 600, height: 100 },
-      capacity: 200,
-      label: "General Standing",
-      tier: "economy",
-    },
-    // Tables
-    {
-      id: "table-1",
-      type: "table",
-      position: { x: 100, y: 580 },
-      seats: 6,
-      shape: "round",
-      label: "T1",
-      tier: "premium",
-    },
-    {
-      id: "table-2",
-      type: "table",
-      position: { x: 1000, y: 580 },
-      seats: 6,
-      shape: "round",
-      label: "T2",
-      tier: "premium",
-    },
-  ],
-})
+export const createMockVenue = (): VenueMap =&gt; ({
+	id: "venue-1",
+	name: "Grand Arena",
+	dimensions: { width: 1200, height: 800 },
+	stage: {
+		position: { x: 400, y: 50 },
+		dimensions: { width: 400, height: 80 },
+		label: "Main Stage",
+	},
+	elements: [
+		// Front rows (VIP)
+		{
+			id: "row-a",
+			type: "seat-row",
+			position: { x: 200, y: 180 },
+			seats: 20,
+			rowLabel: "A",
+			curved: true,
+			curveAngle: 10,
+			spacing: 32,
+			tier: "vip",
+		},
+		{
+			id: "row-b",
+			type: "seat-row",
+			position: { x: 180, y: 220 },
+			seats: 22,
+			rowLabel: "B",
+			curved: true,
+			curveAngle: 8,
+			spacing: 32,
+			tier: "vip",
+		},
+		// Middle rows (Premium)
+		{
+			id: "row-c",
+			type: "seat-row",
+			position: { x: 160, y: 280 },
+			seats: 24,
+			rowLabel: "C",
+			curved: false,
+			curveAngle: 0,
+			spacing: 32,
+			tier: "premium",
+		},
+		{
+			id: "row-d",
+			type: "seat-row",
+			position: { x: 160, y: 320 },
+			seats: 24,
+			rowLabel: "D",
+			curved: false,
+			curveAngle: 0,
+			spacing: 32,
+			tier: "premium",
+		},
+		{
+			id: "row-e",
+			type: "seat-row",
+			position: { x: 160, y: 360 },
+			seats: 24,
+			rowLabel: "E",
+			curved: false,
+			curveAngle: 0,
+			spacing: 32,
+			tier: "premium",
+		},
+		// Back rows (Standard)
+		{
+			id: "row-f",
+			type: "seat-row",
+			position: { x: 140, y: 420 },
+			seats: 26,
+			rowLabel: "F",
+			curved: false,
+			curveAngle: 0,
+			spacing: 32,
+			tier: "standard",
+		},
+		{
+			id: "row-g",
+			type: "seat-row",
+			position: { x: 140, y: 460 },
+			seats: 26,
+			rowLabel: "G",
+			curved: false,
+			curveAngle: 0,
+			spacing: 32,
+			tier: "standard",
+		},
+		{
+			id: "row-h",
+			type: "seat-row",
+			position: { x: 140, y: 500 },
+			seats: 26,
+			rowLabel: "H",
+			curved: false,
+			curveAngle: 0,
+			spacing: 32,
+			tier: "standard",
+		},
+		// VIP Boxes
+		{
+			id: "box-1",
+			type: "box",
+			position: { x: 50, y: 180 },
+			dimensions: { width: 100, height: 120 },
+			capacity: 8,
+			label: "Box 1",
+			amenities: ["Private Bar", "Catering", "VIP Entrance"],
+			tier: "vip",
+		},
+		{
+			id: "box-2",
+			type: "box",
+			position: { x: 1050, y: 180 },
+			dimensions: { width: 100, height: 120 },
+			capacity: 8,
+			label: "Box 2",
+			amenities: ["Private Bar", "Catering", "VIP Entrance"],
+			tier: "vip",
+		},
+		// Standing Areas
+		{
+			id: "standing-1",
+			type: "standing",
+			position: { x: 300, y: 580 },
+			dimensions: { width: 600, height: 100 },
+			capacity: 200,
+			label: "General Standing",
+			tier: "economy",
+		},
+		// Tables
+		{
+			id: "table-1",
+			type: "table",
+			position: { x: 100, y: 580 },
+			seats: 6,
+			shape: "round",
+			label: "T1",
+			tier: "premium",
+		},
+		{
+			id: "table-2",
+			type: "table",
+			position: { x: 1000, y: 580 },
+			seats: 6,
+			shape: "round",
+			label: "T2",
+			tier: "premium",
+		},
+	],
+});
 &nbsp;
-export const generateId = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >`</span>el-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`</span></span>
+export const generateId = () =&gt;
+	`el-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -544,7 +547,7 @@ export const generateId = <span class="cstat-no" title="statement not covered" >
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-19T02:17:56.316Z
+                at 2025-12-19T02:20:48.159Z
             </div>
         <script src="../prettify.js"></script>
         <script>
