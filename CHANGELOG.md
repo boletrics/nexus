@@ -1,3 +1,13 @@
+# 1.0.0 (2025-12-19)
+
+
+### Features
+
+* Add many dependencies and update gitignore ([72f0cb8](https://github.com/boletrics/nexus/commit/72f0cb87b0f78a22af9b550be0b33a132be26acf))
+* Implement element deletion and improve canvas interactions ([97d3266](https://github.com/boletrics/nexus/commit/97d3266604993ec39ccd831d7832bc0957e06b72))
+* Specify pnpm as package manager ([0473a44](https://github.com/boletrics/nexus/commit/0473a4452415cc81500521a60a7ef27e991f1185))
+* Specify pnpm as package manager ([fc68493](https://github.com/boletrics/nexus/commit/fc68493b9faec5387fc26f97007e02949b52a14a))
+
 # [1.1.0](https://github.com/algtools/next-template/compare/v1.0.0...v1.1.0) (2025-12-17)
 
 
