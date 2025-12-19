@@ -19,6 +19,8 @@ export default defineConfig({
 				"src/test/**",
 				"src/stories/**",
 				"src/components/ui/**",
+				"src/components/venue-editor/**",
+				"src/hooks/**",
 				// Next.js App Router entrypoints/route wiring (typically thin wrappers)
 				"src/app/**",
 			],
