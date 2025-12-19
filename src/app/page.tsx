@@ -1,10 +1,5 @@
-import { listTasks } from "@/lib/api/tasks";
-import { HomeView } from "@/views/HomeView";
+import { VenueMapEditor } from "@/components/venue-editor";
 
-export default async function Home() {
-	const initialTasks = await listTasks({ page: 1, per_page: 20 })
-		.then((r) => r.result)
-		.catch(() => []);
-
-	return <HomeView initialTasks={initialTasks} />;
+export default function Home() {
+	return <VenueMapEditor />;
 }
