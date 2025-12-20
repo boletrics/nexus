@@ -148,9 +148,9 @@ export function EditorHeader() {
 					</DropdownMenuContent>
 				</DropdownMenu>
 
-				<Button size="sm" className="hidden h-8 gap-2 sm:flex">
-					<Save className="h-3.5 w-3.5" />
-					Save
+				<Button variant="ghost" size="icon" className="hidden h-8 w-8 sm:flex">
+					<Save className="h-4 w-4" />
+					<span className="sr-only">Save</span>
 				</Button>
 			</div>
 		</header>
