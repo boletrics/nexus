@@ -38,16 +38,18 @@ import { cn } from "@/lib/utils";
 export function PropertiesPanel() {
 	const {
 		venue,
-		selectedElement,
-		setSelectedElement,
+		selectedElements,
+		setSelectedElements,
 		updateElement,
 		deleteElement,
 		duplicateElement,
 	} = useEditor();
 
+	// Show properties for first selected element only
+	const selectedElement = selectedElements[0] || null;
 	const element = venue.elements.find((el) => el.id === selectedElement);
 
-	if (!element) {
+	if (!selectedElement || !element) {
 		return (
 			<div className="hidden w-72 flex-col border-l border-border bg-card lg:flex">
 				<div className="flex h-12 items-center justify-between border-b border-border px-4">
@@ -104,7 +106,7 @@ export function PropertiesPanel() {
 					variant="ghost"
 					size="icon"
 					className="h-7 w-7"
-					onClick={() => setSelectedElement(null)}
+					onClick={() => setSelectedElements([])}
 				>
 					<X className="h-4 w-4" />
 					<span className="sr-only">Close</span>
