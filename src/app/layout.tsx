@@ -30,6 +30,26 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								try {
+									const theme = localStorage.getItem('venue-editor-theme') || 'system';
+									let resolvedTheme = theme;
+									if (theme === 'system') {
+										resolvedTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+									}
+									document.documentElement.classList.add(resolvedTheme);
+								} catch (e) {
+									document.documentElement.classList.add('dark');
+								}
+							})();
+						`,
+					}}
+				/>
+			</head>
 			<body
 				className={`${inter.variable} ${sourceSerif4.variable} ${jetBrainsMono.variable} font-sans antialiased`}
 			>

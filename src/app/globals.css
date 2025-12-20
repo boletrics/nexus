@@ -235,9 +235,18 @@
 	@apply bg-muted-foreground/30 rounded hover:bg-muted-foreground/50;
 }
 
-/* Canvas grid pattern */
+/* Canvas grid pattern - dots instead of lines */
 .canvas-grid {
-	background-image:
-		linear-gradient(to right, var(--canvas-grid) 1px, transparent 1px),
-		linear-gradient(to bottom, var(--canvas-grid) 1px, transparent 1px);
+	--canvas-dot-size: 1.25px;
+	background-color: var(--canvas);
+	background-image: radial-gradient(
+		circle at 1px 1px,
+		var(--canvas-grid) var(--canvas-dot-size),
+		transparent calc(var(--canvas-dot-size) + 0.25px)
+	);
+	background-size: 24px 24px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }

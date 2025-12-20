@@ -12,7 +12,7 @@ describe("EditorContext", () => {
 
 		expect(result.current.venue).toBeDefined();
 		expect(result.current.mode).toBe("edit");
-		expect(result.current.zoom).toBe(1);
+		expect(result.current.zoom).toBe(0.8);
 		expect(result.current.setZoom).toBeDefined();
 		expect(result.current.setMode).toBeDefined();
 	});

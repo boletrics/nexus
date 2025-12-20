@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 interface ElementProps {
 	element: VenueElement;
 	isSelected: boolean;
-	onClick: () => void;
+	onClick: (e: React.MouseEvent) => void;
 	onDragStart: (e: React.MouseEvent) => void;
 }
 
@@ -48,7 +48,10 @@ export function SeatRowElement({
 			transform={`translate(${row.position.x}, ${row.position.y})`}
 			onClick={onClick}
 			onMouseDown={onDragStart}
-			className={cn("cursor-move", isSelected && "drop-shadow-lg")}
+			className={cn(
+				"venue-element cursor-move",
+				isSelected && "drop-shadow-lg",
+			)}
 		>
 			{/* Row label */}
 			<text
@@ -123,7 +126,7 @@ export function StandingAreaElement({
 			transform={`translate(${area.position.x}, ${area.position.y})`}
 			onClick={onClick}
 			onMouseDown={onDragStart}
-			className="cursor-move"
+			className="venue-element cursor-move"
 		>
 			<rect
 				width={area.dimensions.width}
@@ -200,7 +203,7 @@ export function BoxElement({
 			transform={`translate(${box.position.x}, ${box.position.y})`}
 			onClick={onClick}
 			onMouseDown={onDragStart}
-			className="cursor-move"
+			className="venue-element cursor-move"
 		>
 			<rect
 				width={box.dimensions.width}
@@ -272,7 +275,7 @@ export function TableElement({
 			transform={`translate(${table.position.x}, ${table.position.y})`}
 			onClick={onClick}
 			onMouseDown={onDragStart}
-			className="cursor-move"
+			className="venue-element cursor-move"
 		>
 			{table.shape === "round" ? (
 				<>

@@ -76,10 +76,13 @@ export function EditorToolbar() {
 		setActiveTool,
 		showGrid,
 		setShowGrid,
-		selectedElement,
+		selectedElements,
 		deleteElement,
 		duplicateElement,
 	} = useEditor();
+
+	const selectedElement =
+		selectedElements.length > 0 ? selectedElements[0] : null;
 
 	if (mode !== "edit") return null;
 
