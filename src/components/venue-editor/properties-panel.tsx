@@ -48,22 +48,7 @@ export function PropertiesPanel() {
 	const element = venue.elements.find((el) => el.id === selectedElement);
 
 	if (!element) {
-		return (
-			<div className="hidden w-72 flex-col border-l border-border bg-card lg:flex">
-				<div className="flex h-12 items-center justify-between border-b border-border px-4">
-					<span className="text-sm font-medium">Properties</span>
-				</div>
-				<div className="flex flex-1 flex-col items-center justify-center p-6 text-center">
-					<div className="mb-3 rounded-full bg-muted p-3">
-						<ChevronRight className="h-5 w-5 text-muted-foreground" />
-					</div>
-					<p className="text-sm font-medium">No element selected</p>
-					<p className="mt-1 text-xs text-muted-foreground">
-						Select an element on the canvas to edit its properties
-					</p>
-				</div>
-			</div>
-		);
+		return null;
 	}
 
 	const getElementIcon = () => {
