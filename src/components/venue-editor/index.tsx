@@ -17,16 +17,16 @@ export function VenueMapEditor() {
 			<EditorProvider>
 				<div className="flex h-screen flex-col overflow-hidden bg-background">
 					<EditorHeader />
-				<div className="flex flex-1 overflow-hidden">
-					<div className="relative flex min-w-0 flex-1 flex-col overflow-hidden">
-						<EditorToolbar />
-						<TierPalette />
-						<EditorCanvas />
-						<ZoomControls />
-						<MobileToolbar />
+					<div className="flex flex-1 overflow-hidden">
+						<div className="relative flex min-w-0 flex-1 flex-col overflow-hidden">
+							<EditorToolbar />
+							<TierPalette />
+							<EditorCanvas />
+							<ZoomControls />
+							<MobileToolbar />
+						</div>
+						<PropertiesPanel />
 					</div>
-					<PropertiesPanel />
-				</div>
 					<StatsBar />
 				</div>
 			</EditorProvider>
