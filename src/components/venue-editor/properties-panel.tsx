@@ -49,7 +49,7 @@ export function PropertiesPanel() {
 
 	if (!element) {
 		return (
-			<div className="hidden w-72 flex-col border-l border-border bg-card lg:flex">
+			<div className="hidden w-72 shrink-0 flex-col border-l border-border bg-card lg:flex">
 				<div className="flex h-12 items-center justify-between border-b border-border px-4">
 					<span className="text-sm font-medium">Properties</span>
 				</div>
@@ -93,7 +93,7 @@ export function PropertiesPanel() {
 	};
 
 	return (
-		<div className="hidden w-72 flex-col border-l border-border bg-card lg:flex">
+		<div className="hidden w-72 shrink-0 flex-col border-l border-border bg-card lg:flex">
 			{/* Header */}
 			<div className="flex h-12 items-center justify-between border-b border-border px-4">
 				<div className="flex items-center gap-2">
